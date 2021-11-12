@@ -13,15 +13,15 @@
            
                    < div >
            
-                       < h2 > 維修項目單 </ h2 >
+                       < h1> 維修項目單 </ h1 >
            
                        < br />
            
-                       < asp:Label ID = "Label1" runat="server" Text="帳號" Font-Size="X-Large"></asp:Label >
+                       < asp:Label ID = "Label1" runat="server" Text="編號0971" Font-Size="X-Large"></asp:Label >
               
                           < asp:TextBox ID = "tb_CellPhone" runat="server" Height="15px" Width="200px"></asp:TextBox >< br />
                  
-                             < asp:Label ID = "Label2" runat="server" Text="密碼" Font-Size="X-Large"></asp:Label >
+                             < asp:Label ID = "Label2" runat="server" Text="聯絡方式" Font-Size="X-Large"></asp:Label >
                     
                                 < asp:TextBox ID = "tb_Pass" runat="server" TextMode="Password" Height="15px" Width="200px"></asp:TextBox >
                        
