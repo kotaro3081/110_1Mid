@@ -1,57 +1,78 @@
-﻿< !DOCTYPE html >
- 
+﻿<%@ Page Language = "C#" AutoEventWireup="true" CodeBehind="Sample2.aspx.cs" Inherits="_110_1Mid.Sample2" %>
 
- < html xmlns = "http://www.w3.org/1999/xhtml" >
-  < head runat = "server" >
-   < meta http - equiv = "Content-Type" content = "text/html; charset=utf-8" />
-        
-            < title ></ title >
-        </ head >
-        < body >
-        
-            < form id = "form1" runat = "server" >
-           
-                   < div >
-           
-                       < h1> 維修項目單 </ h1 >
-           
-                       < br />
-           
-                       < asp:Label ID = "Label1" runat="server" Text="編號0971" Font-Size="X-Large"></asp:Label >
-              
-                          < asp:TextBox ID = "tb_CellPhone" runat="server" Height="15px" Width="200px"></asp:TextBox >< br />
-                 
-                             < asp:Label ID = "Label2" runat="server" Text="聯絡方式" Font-Size="X-Large"></asp:Label >
-                    
-                                < asp:TextBox ID = "tb_Pass" runat="server" TextMode="Password" Height="15px" Width="200px"></asp:TextBox >
-                       
-                                   < asp:Image ID = "Image1" runat="server" Height="30px" ImageAlign="NotSet" Width="30px" ImageUrl="~/eye-slash-solid.svg" /><br />
-            <asp:Label ID = "Label3" runat="server" Text="管道得知" Font-Size="X-Large"></asp:Label >
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>維修項目單</h1>
+            <asp:Label ID = "Label1" runat="server" Text="編號" Font-Size="X-Large"></asp:Label >< br />
   
-              < asp:RadioButtonList ID = "rb_Gender" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                <asp:ListItem > 網頁廣告 </ asp:ListItem >
-    
-                    < asp:ListItem > 電視 </ asp:ListItem >
-         
-                         < asp:ListItem > 其他 </ asp:ListItem >
+              < asp:Label ID = "Label2" runat="server" Text="聯絡方式" Font-Size="X-Large">
+            </asp:Label >< asp:DropDownList ID = "ddl_Type" runat="server">
+                <asp:listitem value = "0" > 手機 </ asp:listitem >
+      
+                      < asp:listitem value = "1" > 市話 </ asp:listitem >
+             
+                         </ asp:DropDownList >< br />
               
-                          </ asp:RadioButtonList >< br />
-               
-                           < asp:Label ID = "Label4" runat="server" Text="影片說明" Font-Size="X-Large"></asp:Label >
-                  
-                              < asp:HyperLink ID = "HyperLink1" runat="server" ImageUrl="youtube-brands.svg">HyperLink</asp:HyperLink >
-                     
-                                 < br />
-                     
-                                 < asp:Label ID = "Label5" runat="server" Text="驗證碼" Font-Size="X-Large"></asp:Label >
-                        
-                                    < asp:TextBox ID = "TextBox1" runat="server" Width="47px"></asp:TextBox >
+                          < asp:DropDownList ID = "ddl_ZoneCode" runat="server">
+                <asp:listitem value = "0" > 0911 </ asp:listitem >
+      
+                      < asp:listitem value = "0" > 0921 </ asp:listitem >
+             
+                             < asp:listitem value = "0" > 0960 </ asp:listitem >
+                    
+                                    < asp:listitem value = "0" > 02 </ asp:listitem >
                            
-                                       < br />
+                                           < asp:listitem value = "0" > 04 </ asp:listitem >
+                                  
+                                                  < asp:listitem value = "0" > 07 </ asp:listitem >
+                                         
+                                                     </ asp:DropDownList >
+                                          
+                                                      < asp:TextBox ID = "tb_Number" runat="server"></asp:TextBox >< br />
+                                             
+                                                         < asp:Label ID = "Label3" runat="server" Text="地址" Font-Size="X-Large">
+            </asp:Label >< asp:DropDownList ID = "ddl_City" runat="server">
+                <asp:listitem value = "0" > 台北市 </ asp:listitem >
+      
+                      < asp:listitem value = "0" > 新北市 </ asp:listitem >
+             
+                             < asp:listitem value = "0" > 台中市 </ asp:listitem >
+                    
+                                    < asp:listitem value = "0" > 台中縣 </ asp:listitem >
                            
-                                       < asp:Button ID = "Button1" runat="server" Height="30px" Text="送出" Width="80px" />
-            <br />
-        </div>
-    </form>
-</body>
-</html>
+                                           < asp:listitem value = "0" > 高雄市 </ asp:listitem >
+                                  
+                                                  < asp:listitem value = "0" > 高雄縣 </ asp:listitem >
+                                         
+                                                     </ asp:DropDownList >
+                                          
+                                                      < asp:TextBox ID = "tb_Add" runat="server"></asp:TextBox >< br />
+                                             
+                                                         < asp:Label ID = "Label4" runat="server" Text="說明" Font-Size="X-Large"></asp:Label >< br />
+                                                
+                                                            < asp:RadioButtonList ID = "rb_Des" runat="server">
+                <asp:ListItem > 否 </ asp:ListItem >
+    
+                    < asp:ListItem > 是 </ asp:ListItem >
+         
+                     </ asp:RadioButtonList >
+          
+                      < asp:TextBox ID = "tb_Des" runat="server" Width="400px" Visible="False"></asp:TextBox >< br />
+             
+                         < asp:Button ID = "btn_Submit" runat="server" Text="送出" />
+            <asp:Label ID = "Ib_Msg" runat="server" Text=""></asp:Label >
+  
+
+          </ div >
+  
+      </ form >
+  </ body >
+  </ html >
